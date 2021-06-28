@@ -57,7 +57,16 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "paths": {
       "@app/*": ["src/app/*"],
-      "@constants/*": ["src/constants/*"]
+      "@assets/*": ["src/app/assets/*"],
+      "@components/*": ["src/app/components/*"],
+      "@hooks/*": ["src/app/hooks/*"],
+      "@screens/*": ["src/app/screens/*"],
+      "@config/*": ["src/config/*"],
+      "@constants/*": ["src/constants/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@redux/*": ["src/redux/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"]
     },
   },
   "include": ["index.d.ts", "src/**/*", "src/App.test.tsx"],
