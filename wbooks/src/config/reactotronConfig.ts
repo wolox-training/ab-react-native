@@ -1,7 +1,6 @@
 import { NativeModules } from 'react-native';
-import Reactotron, { overlay } from 'reactotron-react-native';
+import Reactotron, { overlay, trackGlobalErrors } from 'reactotron-react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import { trackGlobalErrors } from 'reactotron-react-native';
 
 interface Tron {
   log: (...args: any[]) => void;
@@ -20,7 +19,7 @@ if (__DEV__) {
   // Reactotron.setAsyncStorageHandler(AsyncStorage).configure({ name: 'wbooks' }).useReactNative().connect();
   const { scriptURL } = NativeModules.SourceCode;
   const scriptHostname = scriptURL.split('://')[1].split(':')[0];
-  
+
   Reactotron.configure({ name: 'wbooks', host: scriptHostname })
     .use(trackGlobalErrors())
     .setAsyncStorageHandler(AsyncStorage)
