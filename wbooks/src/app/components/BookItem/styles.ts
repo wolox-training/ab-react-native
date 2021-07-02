@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 60,
-    width: 40,
-    marginRight: 20
+    marginRight: 20,
+    width: 40
   },
   bookInfoContainer: {
     flex: 1,

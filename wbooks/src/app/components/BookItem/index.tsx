@@ -17,7 +17,7 @@ function BookItem({ book }: Props) {
       <Image
         style={styles.image}
         resizeMode="contain"
-        source={imageUrl ? { uri: imageUrl } : placeholderImage}
+        source={imageUrl ? { uri: imageUrl, method: 'GET' } : placeholderImage}
       />
       <View style={styles.bookInfoContainer}>
         <Text style={styles.title}>{title}</Text>

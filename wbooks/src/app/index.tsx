@@ -1,6 +1,5 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, View, StatusBar } from 'react-native';
-import { Header } from 'react-native/Libraries/NewAppScreen';
 import BookItem from '@components/BookItem';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 
@@ -12,7 +11,6 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <Header />
           <View style={styles.body}>
             <BookItem book={BOOKS_MOCK[0]} />
             <BookItem book={BOOKS_MOCK[1]} />
