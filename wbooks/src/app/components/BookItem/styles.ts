@@ -2,7 +2,7 @@ import { BLACK, TUNDORA, WHITE } from '@constants/colors';
 import { FONT_SEMIBOLD } from '@constants/fonts';
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   container: {
     backgroundColor: WHITE,
     borderRadius: 5,
@@ -23,8 +23,7 @@ const styles = StyleSheet.create({
     width: 40
   },
   bookInfoContainer: {
-    flex: 1,
-    flexDirection: 'column'
+    flex: 1
   },
   title: {
     color: TUNDORA,
@@ -41,5 +40,3 @@ const styles = StyleSheet.create({
     lineHeight: 17
   }
 });
-
-export default styles;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Book } from '@interfaces/books';
 import { Image, Text, View } from 'react-native';
+import { Book } from '@interfaces/books';
 import placeholderImage from '@assets/images/img_book_placeholder.png';
 
 import styles from './styles';

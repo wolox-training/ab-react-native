@@ -1,12 +1,8 @@
 import { StyleSheet } from 'react-native';
 import { POLAR } from '@constants/colors';
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   body: {
-    // marginTop: 30,
-    backgroundColor: POLAR,
-    flexDirection: 'column'
+    backgroundColor: POLAR
   }
 });
-
-export default styles;
