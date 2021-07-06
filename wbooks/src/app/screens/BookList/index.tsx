@@ -10,7 +10,7 @@ import { ROUTES } from '@constants/routes';
 import styles from './styles';
 
 interface Props {
-  navigation: StackNavigationProp<RootStackParamList, 'BookList'>;
+  navigation: StackNavigationProp<RootStackParamList, ROUTES.bookList>;
 }
 
 function BookList({ navigation }: Props) {
