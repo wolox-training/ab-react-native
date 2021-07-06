@@ -1,6 +1,6 @@
+import { StyleSheet } from 'react-native';
 import { BLACK, TUNDORA, WHITE } from '@constants/colors';
 import { FONT_SEMIBOLD } from '@constants/fonts';
-import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
