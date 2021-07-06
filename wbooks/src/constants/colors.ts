@@ -1,9 +1,13 @@
+export const ALTO = '#DDDDDD';
 export const ATLANTIS = '#A5CD39';
 export const BLACK = '#000000';
 export const CERULEAN = '#00ADEE';
 export const DUSTY_GRAY = '#9B9B9B';
 export const IRON = '#CFD0D2';
+export const MERCURY = '#E4E4E4';
 export const MONZA = '#D0021B';
 export const POLAR = '#EAF6FA';
+export const SILVER = '#CACACA';
 export const TUNDORA = '#4A4A4A';
+export const TURQUOISE = '#39CCCD';
 export const WHITE = '#FFFFFF';
