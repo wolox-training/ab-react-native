@@ -3,7 +3,7 @@ import { View, Text, Image } from 'react-native';
 import { RouteProp } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import { RootStackParamList } from '@interfaces/navigation';
-import { ROUTES } from '@constants/routes';
+import { ROUTES } from '@constants/navigation';
 import placeholderImage from '@assets/img_book_placeholder.png';
 import { ALTO, CERULEAN, MERCURY, TURQUOISE } from '@constants/colors';
 

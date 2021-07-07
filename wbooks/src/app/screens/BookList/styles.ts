@@ -3,6 +3,7 @@ import { POLAR } from '@constants/colors';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: POLAR
+    backgroundColor: POLAR,
+    marginTop: 120
   }
 });
