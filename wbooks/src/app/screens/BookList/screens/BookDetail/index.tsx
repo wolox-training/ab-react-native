@@ -34,7 +34,7 @@ function BookDetail({ route }: Props) {
           <Text numberOfLines={2} style={styles.title}>
             {title}
           </Text>
-          <Text style={{ ...styles.availability, ...(isAvailable ? styles.available : styles.unavailable) }}>
+          <Text style={[styles.availability, isAvailable ? styles.available : styles.unavailable]}>
             {isAvailable ? 'Available' : 'Unavailable'}
           </Text>
           <Text style={styles.text}>{author}</Text>

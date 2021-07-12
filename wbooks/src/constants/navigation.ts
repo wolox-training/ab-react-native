@@ -1,5 +1,5 @@
 import { StackNavigationOptions } from '@react-navigation/stack';
-import HeaderBackground from '@app/components/HeaderBackground';
+import HeaderBackground from '@components/HeaderBackground';
 import { WHITE } from '@constants/colors';
 
 import { FONT_SEMIBOLD } from './fonts';
