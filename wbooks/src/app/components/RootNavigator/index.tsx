@@ -1,18 +1,44 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import BookList from '@screens/BookList';
 import BookDetail from '@screens/BookList/screens/BookDetail';
-import { navigatorConfig, ROUTES } from '@constants/navigation';
+import WishList from '@screens/WishList';
+import { navigatorConfig, ROUTES, TABS, tabNavigatorConfig } from '@constants/navigation';
 import { RootStackParamList } from '@interfaces/navigation';
 
-const { Screen, Navigator } = createStackNavigator<RootStackParamList>();
+import TabIcon from './components/TabIcon';
 
-function RootNavigator() {
+const { Screen, Navigator } = createStackNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator();
+
+function BookListStackScreen() {
   return (
-    <Navigator initialRouteName={ROUTES.bookList} screenOptions={navigatorConfig}>
+    <Navigator screenOptions={navigatorConfig}>
       <Screen name={ROUTES.bookList} component={BookList} options={{ title: 'Library' }} />
       <Screen name={ROUTES.bookDetail} component={BookDetail} options={{ title: 'Book Detail' }} />
     </Navigator>
+  );
+}
+
+function WishListStackScreen() {
+  return (
+    <Navigator screenOptions={navigatorConfig}>
+      <Screen name={ROUTES.wishList} component={WishList} options={{ title: 'Wish List' }} />
+    </Navigator>
+  );
+}
+
+function RootNavigator() {
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused }) => <TabIcon isFocused={focused} route={route} />
+      })}
+      tabBarOptions={tabNavigatorConfig.tabBarOptions}>
+      <Tab.Screen name={TABS.bookList} component={BookListStackScreen} />
+      <Tab.Screen name={TABS.wishList} component={WishListStackScreen} />
+    </Tab.Navigator>
   );
 }
 

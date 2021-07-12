@@ -1,6 +1,7 @@
 import { BookDetail } from './books';
 
 export type RootStackParamList = {
-  BookList: undefined;
+  Library: undefined;
   BookDetail: BookDetail;
+  WishList: undefined;
 };
