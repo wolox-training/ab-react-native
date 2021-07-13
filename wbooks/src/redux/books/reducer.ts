@@ -1,4 +1,4 @@
-import { BookDetail } from '@interfaces/Books';
+import { BookDetail } from '@interfaces/books';
 
 import { actions } from './actions';
 
