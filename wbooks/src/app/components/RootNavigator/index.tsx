@@ -21,14 +21,6 @@ function BookListStackScreen() {
   );
 }
 
-function WishListStackScreen() {
-  return (
-    <Navigator screenOptions={navigatorConfig}>
-      <Screen name={ROUTES.wishList} component={WishList} options={{ title: 'Wish List' }} />
-    </Navigator>
-  );
-}
-
 function RootNavigator() {
   return (
     <Tab.Navigator
@@ -37,7 +29,7 @@ function RootNavigator() {
       })}
       tabBarOptions={tabNavigatorConfig.tabBarOptions}>
       <Tab.Screen name={TABS.bookList} component={BookListStackScreen} />
-      <Tab.Screen name={TABS.wishList} component={WishListStackScreen} />
+      <Tab.Screen name={TABS.wishList} component={WishList} />
     </Tab.Navigator>
   );
 }
