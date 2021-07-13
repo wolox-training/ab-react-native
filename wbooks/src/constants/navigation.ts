@@ -12,8 +12,7 @@ import { FONT_SEMIBOLD } from './fonts';
 
 export enum ROUTES {
   bookList = 'Library',
-  bookDetail = 'BookDetail',
-  wishList = 'WishList'
+  bookDetail = 'BookDetail'
 }
 
 export enum TABS {
@@ -25,12 +24,12 @@ interface TabIcons {
   [key: string]: { active: ImageSourcePropType; inactive: ImageSourcePropType };
 }
 
-export const tabIcons: TabIcons = {
-  [ROUTES.bookList]: {
+export const TAB_ICONS: TabIcons = {
+  [TABS.bookList]: {
     active: bookListIconActive,
     inactive: bookListIconInactive
   },
-  [ROUTES.wishList]: {
+  [TABS.wishList]: {
     active: wishlistIconActive,
     inactive: wishlistIconInactive
   }

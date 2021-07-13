@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image } from 'react-native';
-import { tabIcons } from '@constants/navigation';
+import { TAB_ICONS } from '@constants/navigation';
 
 interface Props {
   isFocused: boolean;
@@ -8,7 +8,7 @@ interface Props {
 }
 
 function TabIcon({ isFocused, route }: Props) {
-  return <Image source={tabIcons[route.name][isFocused ? 'active' : 'inactive']} />;
+  return <Image source={TAB_ICONS[route.name][isFocused ? 'active' : 'inactive']} />;
 }
 
 export default TabIcon;
