@@ -5,7 +5,7 @@ import BookItem from '@components/BookItem';
 import { BOOKS_MOCK as books } from '@constants/mockBooks';
 import { BookDetail } from '@interfaces/books';
 import { RootStackParamList } from '@interfaces/navigation';
-import { ROUTES } from '@constants/routes';
+import { ROUTES } from '@constants/navigation';
 
 import styles from './styles';
 
