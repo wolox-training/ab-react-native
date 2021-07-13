@@ -8,7 +8,7 @@ export interface BookState {
   booksError: string | null;
 }
 
-const initialState: BookState = {
+export const INITIAL_STATE: BookState = {
   books: [],
   booksLoading: false,
   booksError: null
@@ -30,7 +30,7 @@ interface GetBooksFailure {
 
 type Action = GetBooks | GetBooksSuccess | GetBooksFailure;
 
-export const bookReducer = (state = initialState, action: Action): BookState => {
+export const bookReducer = (state = INITIAL_STATE, action: Action): BookState => {
   switch (action.type) {
     case actions.GET_BOOKS:
       return {
