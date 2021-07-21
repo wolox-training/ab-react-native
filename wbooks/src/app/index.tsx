@@ -1,15 +1,14 @@
 import React from 'react';
-import { SafeAreaView, StatusBar } from 'react-native';
-import BookList from '@screens/BookList';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from '@components/RootNavigator';
 
 const App = () => {
   return (
-    <>
+    <NavigationContainer>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <BookList />
-      </SafeAreaView>
-    </>
+      <RootNavigator />
+    </NavigationContainer>
   );
 };
 

@@ -1,19 +1,21 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
-import { Book } from '@interfaces/books';
+import { Image, Text, View, TouchableOpacity } from 'react-native';
+import { BookDetail } from '@interfaces/books';
 import placeholderImage from '@assets/img_book_placeholder.png';
 
 import styles from './styles';
 
 interface Props {
-  book: Book;
+  book: BookDetail;
+  onPress: (book: BookDetail) => void;
 }
 
-function BookItem({ book }: Props) {
+function BookItem({ book, onPress }: Props) {
+  const handlePress = () => onPress(book);
   const { imageUrl, title, author } = book;
 
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={handlePress}>
       <Image
         style={styles.image}
         resizeMode="contain"
@@ -23,7 +25,7 @@ function BookItem({ book }: Props) {
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.author}>{author}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
