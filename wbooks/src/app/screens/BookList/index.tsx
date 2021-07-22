@@ -18,7 +18,6 @@ interface Props {
 function BookList({ navigation }: Props) {
   const dispatch = useDispatch();
   const books = useSelector<AppState, BookDetail[]>(state => state.bookReducer.books);
-  // console.tron.log(books);
 
   const onPressBook = (book: BookDetail) => navigation.navigate(ROUTES.bookDetail, book);
   const keyExtractor = ({ id }: BookDetail) => String(id);
