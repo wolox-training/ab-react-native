@@ -4,7 +4,7 @@ import { fetchMiddleware } from 'redux-recompose';
 import Reactotron from '@config/reactotronConfig';
 
 import bookReducer from './books/reducer';
-console.log(bookReducer);
+
 const rootReducer = combineReducers({ bookReducer });
 const middlewares = [applyMiddleware(thunk, fetchMiddleware)];
 

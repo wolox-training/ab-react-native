@@ -17,6 +17,4 @@ const reducerDescription = {
   primaryActions: [actions.GET_BOOKS]
 };
 
-console.log(reducerDescription);
-
 export default createReducer(initialState, completeReducer(reducerDescription));
