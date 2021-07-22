@@ -6,7 +6,7 @@ import BookItem from '@components/BookItem';
 import { BookDetail } from '@interfaces/books';
 import { RootStackParamList } from '@interfaces/navigation';
 import { ROUTES } from '@constants/navigation';
-import actionCreators from '@redux/books/actions';
+import { actionCreators } from '@redux/books/actions';
 import { AppState } from '@interfaces/redux';
 
 import styles from './styles';
@@ -18,6 +18,7 @@ interface Props {
 function BookList({ navigation }: Props) {
   const dispatch = useDispatch();
   const books = useSelector<AppState, BookDetail[]>(state => state.bookReducer.books);
+  // console.tron.log(books);
 
   const onPressBook = (book: BookDetail) => navigation.navigate(ROUTES.bookDetail, book);
   const keyExtractor = ({ id }: BookDetail) => String(id);
