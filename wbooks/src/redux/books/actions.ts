@@ -6,3 +6,5 @@ export const actions = createTypes(completeTypes({ primaryActions: ['GET_BOOKS']
 export const actionCreators = {
   getBooks: () => ({ type: actions.GET_BOOKS, target: 'books', service: getBooks })
 };
+
+export default actionCreators;
