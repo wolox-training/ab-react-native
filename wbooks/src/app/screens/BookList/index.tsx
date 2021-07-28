@@ -6,7 +6,7 @@ import BookItem from '@components/BookItem';
 import { BookDetail } from '@interfaces/books';
 import { RootStackParamList } from '@interfaces/navigation';
 import { ROUTES } from '@constants/navigation';
-import actionCreators from '@redux/books/actions';
+import { actionCreators } from '@redux/books/actions';
 import { AppState } from '@interfaces/redux';
 
 import styles from './styles';
